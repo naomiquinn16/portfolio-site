@@ -24,9 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              {
-                "input":"src/my-theme.scss"
-              },
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,9 +89,6 @@
               "src/assets"
             ],
             "styles": [
-              {
-                "input":"src/my-theme.scss"
-              },
               "src/styles.scss"
             ],
             "scripts": []
