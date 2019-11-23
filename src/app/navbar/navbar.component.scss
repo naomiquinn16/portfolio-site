@@ -1,0 +1,68 @@
+.nav {
+  &__logo {
+    position: fixed;
+    display: block;
+    left: 5em;
+    top: 3em;
+    height: auto;
+
+    a {
+      color: black;
+      text-decoration: none;
+      line-height: inherit;
+      cursor: pointer;
+    }
+  }
+
+
+  &__button {
+    position: fixed;
+    width: 4em;
+    height: 4em;
+
+    &__link {
+      position: fixed;
+      top: 3.7em;
+      right: 5em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+
+  &__overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    transition: 0.5s;
+      &__content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+      a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 3rem;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        &:hover{
+          color: white;
+        }
+      }
+
+    }
+  }
+}

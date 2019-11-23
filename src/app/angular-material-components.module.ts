@@ -44,6 +44,29 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatProgressBarModule,
     MatDialogModule,
     MatSnackBarModule
+  ],
+  exports:[
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatGridListModule,
+    MatExpansionModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatSnackBarModule
   ]
+
 })
 export class AngularMaterialComponentsModule { }
