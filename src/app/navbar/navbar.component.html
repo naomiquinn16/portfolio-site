@@ -1,7 +1,7 @@
 <div class="nav">
     <div class="nav__logo">
-        <a href="index.html">
-          <h1>NAOMI QUINN</h1>
+        <a href="/">
+          <img src="../../assets/logos/logo_black.png">
         </a>
       </div>
       <div class="nav__button">
@@ -19,12 +19,15 @@
             <img src="../../assets/svgs/close-menu.svg" alt="">
         </a>
 
-        <div class="nav__overlay__content">
-          <a href="#">About</a>
-          <a href="#">Work</a>
-          <a href="#">Play</a>
-          <a href="#">Contact</a>
-        </div>
+        <li class="nav__overlay__content" *ngFor="let field of fields">
+            <a
+            (click)="closeNav()"
+            [ngx-scroll-to]="field"
+            [ngx-scroll-to-offset]="ngxScrollToOffset"
+            [ngx-scroll-to-duration]="ngxScrollToDuration"
+            [routerLink]= "'/'"
+           > {{ field | uppercase}}</a>
+        </li>
       </div>
 </div>
 

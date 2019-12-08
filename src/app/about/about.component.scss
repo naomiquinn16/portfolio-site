@@ -1,0 +1,37 @@
+.about{
+ height: auto;
+  &__logo {
+    &__square{
+      display: block;
+      height: 15rem;
+      animation-name: moveInFromTop;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      &__first{
+
+      }
+      &__second{
+
+      }
+      &__third{
+
+      }
+    }
+  }
+
+
+@keyframes moveInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+}
+}

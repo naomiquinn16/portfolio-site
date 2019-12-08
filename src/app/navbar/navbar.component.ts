@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {trigger, style, animate, transition} from '@angular/animations';
-
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -15,9 +15,20 @@ import {trigger, style, animate, transition} from '@angular/animations';
   ]
 })
 export class NavbarComponent implements OnInit {
-
   showBurger = true;
-  constructor() { }
+  public ngxScrollToOffset: number;
+  public ngxScrollToDuration: number;
+  constructor( private route: ActivatedRoute) {
+    this.ngxScrollToOffset = -26;
+    this.ngxScrollToDuration = 1500;
+   }
+  fields = [
+    'about',
+    'work',
+    'play',
+    'contact'
+  ];
+
 
   ngOnInit() {
   }

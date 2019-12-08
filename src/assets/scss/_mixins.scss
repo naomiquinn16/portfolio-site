@@ -1,0 +1,12 @@
+
+@mixin small-screen {
+  @media (max-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin extra-small-screen {
+  @media (max-width: 26rem) {
+    @content;
+  }
+}
