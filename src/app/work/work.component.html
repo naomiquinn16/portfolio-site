@@ -1,12 +1,15 @@
-<section fxLayout="row wrap" fxLayoutAlign="center" class="work" id="work">
+<section fxLayout="row wrap" fxLayoutAlign="center center" class="work section" id="work">
   <div *ngFor="let work of works">
       <div class="work__card">
           <div class="work__card__side work__card__side--front">
               <h4>{{work.title}}</h4>
+              <img style="width: 100%;" [src]="'assets/projects/'+work.image" alt="">
           </div>
           <div class="work__card__side work__card__side--back">
-              hi
-            </div>
+              <p>{{work.description}}</p>
+              <p>{{work.tech}}</p>
+              <button  mat-raised-button color="primary">Want to learn more?</button>
+          </div>
         </div>
   </div>
 </section>

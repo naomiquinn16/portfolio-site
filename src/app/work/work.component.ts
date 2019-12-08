@@ -9,7 +9,7 @@ export class WorkComponent implements OnInit {
   works = [
     {
       title: 'Team Resources Dashboard',
-      image: '',
+      image: 'sample-photo.jpeg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' +
                    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
                    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris' +
@@ -19,7 +19,7 @@ export class WorkComponent implements OnInit {
     },
     {
       title: 'Team Brochure Website',
-      image: '',
+      image: 'sample-photo.jpeg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' +
                    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
                    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris' +
@@ -33,7 +33,7 @@ export class WorkComponent implements OnInit {
                    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
                    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris' +
                    'sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: '',
+      image: 'sample-photo.jpeg',
       tech: 'Angular 7 + Bootstrap, Node.js',
       github: '',
     },
@@ -43,7 +43,7 @@ export class WorkComponent implements OnInit {
                    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' +
                    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris' +
                    'sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: '',
+      image: 'sample-photo.jpeg',
       tech: 'Angular 7 + Angular Material, Node.js',
       github: ''
     },

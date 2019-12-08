@@ -1,37 +1,36 @@
 .about{
- height: auto;
+  height: 95vh;
+  margin: 2rem auto;
+  position: relative;
   &__logo {
+    width: 80%;
     &__square{
-      display: block;
-      height: 15rem;
-      animation-name: moveInFromTop;
-      animation-duration: 1s;
-      animation-delay: 1s;
-      &__first{
-
+      width: 15rem;
+      &--1{
+        top:10em;
+        position: absolute;
       }
-      &__second{
-
+      &--2{
+        top:11em;
+        position: absolute;
       }
-      &__third{
-
+      &--3{
+        top:12em;
+        position: absolute;
       }
     }
+    &__name{
+      position: relative;
+      width: 15rem;
+      top: 9em;
+    }
+    &__role{
+      position: relative;
+      width: 11rem;
+      top: 10em;
+    }
+
   }
 
 
-@keyframes moveInFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  80% {
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-
-}
 }

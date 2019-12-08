@@ -1,6 +1,7 @@
 @import '../../assets/scss/mixins';
 .nav {
-  height: 25vh;
+  position: fixed;
+  display: block;
   &__logo {
     position: fixed;
     display: block;

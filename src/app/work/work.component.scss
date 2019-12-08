@@ -1,14 +1,15 @@
 .work{
   width: 80vw;
   height:auto;
-  margin:auto;
+  margin: 2rem auto;
   &__card{
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 10rem;
-    width: 16vw;
-    margin: .5rem 1rem;
+    height: 20rem;
+    width: 14vw;
+    margin: 0 1.5rem;
+
     &:hover{
       .work__card__side--front {
         transform: rotateY(-180deg);
@@ -19,7 +20,7 @@
 
     }
     &__side{
-      height: 10rem;
+      height: 20rem;
       transition: all .8s ease;
       position: absolute;
       top: 0;
@@ -31,12 +32,14 @@
       overflow: hidden;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
       &--front{
+        padding: 0 1rem;
         background-color: #fff;
         &:hover{
           transform: rotateY(-180deg);
         }
       }
       &--back{
+        padding: 0 1rem;
         background-color: #fff;
         transform: rotateY(180deg);
         &:hover{
