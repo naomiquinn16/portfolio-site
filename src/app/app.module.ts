@@ -13,7 +13,7 @@ import { WorkComponent } from './work/work.component';
 import { PlayComponent } from './play/play.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-
+import { WINDOW_PROVIDERS } from "./window.service";
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { HomeComponent } from './home/home.component';
     FlexLayoutModule,
     ScrollToModule.forRoot()
   ],
-  providers: [],
+  providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

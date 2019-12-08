@@ -1,7 +1,7 @@
 <div class="nav">
     <div class="nav__logo">
         <a href="/">
-          <img src="../../assets/logos/logo_black.png">
+          <img *ngIf="showSmallLogo" src="../../assets/logos/logo_black.png" [@fade]>
         </a>
       </div>
       <div class="nav__button">

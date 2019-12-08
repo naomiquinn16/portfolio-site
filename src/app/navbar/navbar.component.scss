@@ -7,6 +7,7 @@
     display: block;
     left: 4em;
     top: 2em;
+
     img  {
       height: 9rem;
     }
@@ -23,7 +24,10 @@
       cursor: pointer;
     }
   }
-
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    1%   { opacity: 1; }
+  }
 
   &__button {
     position: fixed;
