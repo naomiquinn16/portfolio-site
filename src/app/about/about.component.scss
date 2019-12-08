@@ -1,3 +1,5 @@
+@import '../../assets/scss/mixins';
+
 .about{
   height: 95vh;
   margin: 2rem auto;
@@ -6,28 +8,47 @@
     width: 80%;
     &__square{
       width: 15rem;
+      @include extra-small-screen {
+        width: 10.5rem;
+      }
       &--1{
         top:10em;
         position: absolute;
+        @include extra-small-screen {
+          top: 7em;
+        }
       }
       &--2{
         top:11em;
         position: absolute;
+        @include extra-small-screen {
+          top: 8em;
+        }
       }
       &--3{
         top:12em;
         position: absolute;
+        @include extra-small-screen {
+          top: 9em;
+        }
       }
     }
     &__name{
       position: relative;
       width: 15rem;
       top: 9em;
+      @include extra-small-screen {
+        width: 13rem;
+        top: 7em;
+      }
     }
     &__role{
       position: relative;
       width: 11rem;
       top: 10em;
+      @include extra-small-screen {
+        top: 8em;
+      }
     }
 
   }
