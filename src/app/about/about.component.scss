@@ -11,25 +11,42 @@
       @include extra-small-screen {
         width: 10.5rem;
       }
+
       &--1{
         top:10em;
-        position: absolute;
+        animation-delay: .5s;
         @include extra-small-screen {
           top: 7em;
         }
       }
       &--2{
         top:11em;
-        position: absolute;
+        animation-delay: 1s;
         @include extra-small-screen {
           top: 8em;
         }
       }
       &--3{
         top:12em;
-        position: absolute;
+        animation-delay: 1.5s;
         @include extra-small-screen {
           top: 9em;
+        }
+      }
+      &--1, &--2, &--3{
+        position: absolute;
+        opacity: 0;
+        animation-name: 'appear';
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes appear {
+        from{
+          opacity: 0;
+        }
+        to{
+          opacity: 1;
         }
       }
     }
