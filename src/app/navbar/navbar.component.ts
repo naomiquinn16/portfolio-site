@@ -1,11 +1,12 @@
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { trigger, style, animate, transition, state } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 import { WINDOW } from '../window.service';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { MenuOverlayComponent } from '../menu-overlay/menu-overlay.component';
 import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -16,6 +17,12 @@ import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
         style({ opacity: 0 }),
         animate(2000, style({ opacity: 1 }))
       ])
+    ]),
+    trigger('swivel', [
+      state('default', style({ transform: 'rotate(0)' })),
+      state('rotated', style({ transform: 'rotate(-360deg)' })),
+      transition('rotated => default', animate('2000ms ease-out')),
+      transition('default => rotated', animate('2000ms ease-in'))
     ])
   ]
 })
@@ -24,6 +31,7 @@ export class NavbarComponent implements OnInit {
   public showSmallLogo = false;
   public showBigLogo = true;
   scrolledAmount = 0;
+  state = 'default';
   constructor(
     private route: ActivatedRoute,
     @Inject(DOCUMENT) private document: Document,
@@ -35,6 +43,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {}
 
   openNav() {
+    this.rotate();
     this.showBurger = false;
     const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
@@ -64,5 +73,9 @@ export class NavbarComponent implements OnInit {
     } else if (this.scrolledAmount < 10) {
       this.showSmallLogo = false;
     }
+  }
+
+  rotate() {
+    this.state = (this.state === 'default' ? 'rotated' : 'default');
   }
 }

@@ -5,32 +5,9 @@
         </a>
       </div>
       <div class="nav__button">
-        <a *ngIf="showBurger" class="nav__button__link" (click)="openNav()">
-          <img src="../../assets/svgs/burger-menu.svg" alt="">
+        <a *ngIf="showBurger" class="nav__button__link" >
+          <img src="../../assets/svgs/burger-menu.svg" alt="" (click)="openNav()" [@swivel]='state'>
         </a>
       </div>
-
-
-
-      <!-- The overlay -->
-
-        <!-- <div id="myNav" class="nav__overlay">
-
-          <a  *ngIf="!showBurger" class="nav__button__link" (click)="closeNav()">
-              <img src="../../assets/svgs/close-menu.svg" alt="">
-          </a>
-
-          <li class="nav__overlay__content" *ngFor="let field of fields">
-              <a
-              (click)="closeNav()"
-              [ngx-scroll-to]="field"
-              [ngx-scroll-to-offset]="ngxScrollToOffset"
-              [ngx-scroll-to-duration]="ngxScrollToDuration"
-              [routerLink]= "'/'"
-             > {{ field | uppercase}}</a>
-          </li>
-        </div> -->
-
-
 </div>
 
