@@ -13,7 +13,8 @@ import { WorkComponent } from './work/work.component';
 import { PlayComponent } from './play/play.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { WINDOW_PROVIDERS } from "./window.service";
+import { WINDOW_PROVIDERS } from './window.service';
+import { MenuOverlayComponent } from './menu-overlay/menu-overlay.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { WINDOW_PROVIDERS } from "./window.service";
     WorkComponent,
     PlayComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    MenuOverlayComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { WINDOW_PROVIDERS } from "./window.service";
     ScrollToModule.forRoot()
   ],
   providers: [WINDOW_PROVIDERS],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [MenuOverlayComponent]
 })
 export class AppModule { }

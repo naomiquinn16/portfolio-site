@@ -1,0 +1,19 @@
+<div class="menu-overlay">
+    <a  *ngIf="!showBurger" class="menu-overlay__button__link" (click)="closeNav()">
+        <img src="../../assets/svgs/close-menu.svg" alt="">
+    </a>
+    <mat-dialog-content>
+      <div>
+          <li class="menu-overlay__content" *ngFor="let menuField of menuFields">
+              <a (click)="closeNav()"
+              [ngx-scroll-to]="menuField"
+              [ngx-scroll-to-offset]="ngxScrollToOffset"
+              [ngx-scroll-to-duration]="ngxScrollToDuration"
+              [routerLink]= "'/'"
+              > {{ menuField | uppercase}}
+              </a>
+          </li>
+      </div>
+    </mat-dialog-content>
+</div>
+

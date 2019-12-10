@@ -24,3 +24,20 @@ h6 {
     font-weight: 500;
 }
 
+.overlay {
+  mat-dialog-container {
+    opacity: 0.9;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .mat-dialog-content{
+      opacity: 1;
+      background-color:pink;
+    }
+
+  }
+
+
+}

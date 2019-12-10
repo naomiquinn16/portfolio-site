@@ -1,0 +1,46 @@
+@import '../../assets/scss/mixins';
+
+.menu-overlay {
+  &__button {
+    position: fixed;
+    width: 4em;
+    height: 4em;
+
+    &__link {
+      position: fixed;
+      top: 3.7em;
+      right: 5em;
+      @include small-screen{
+        top: 2.7em;
+        right: 1.5rem;
+      }
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+
+  &__content {
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+
+    a {
+      padding: 8px;
+      text-decoration: none;
+      color: black;
+      font-size: 3rem;
+      display: block;
+      transition: 0.3s;
+      &:focus{
+        outline: none;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+
+  }
+
+}
