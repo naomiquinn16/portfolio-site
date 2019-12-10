@@ -5,6 +5,7 @@ import { DOCUMENT } from '@angular/common';
 import { WINDOW } from '../window.service';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { MenuOverlayComponent } from '../menu-overlay/menu-overlay.component';
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -23,27 +24,15 @@ export class NavbarComponent implements OnInit {
   public showSmallLogo = false;
   public showBigLogo = true;
   scrolledAmount = 0;
-  public ngxScrollToOffset: number;
-  public ngxScrollToDuration: number;
   constructor(
     private route: ActivatedRoute,
     @Inject(DOCUMENT) private document: Document,
     @Inject(WINDOW) private window: Window,
-    private dialog: MatDialog
-  ) {
-    this.ngxScrollToOffset = -26;
-    this.ngxScrollToDuration = 1500;
-  }
-  fields = [
-    'about',
-    'work',
-    'play',
-    'contact'
-  ];
+    private dialog: MatDialog,
+    private scrollToService: ScrollToService
+  ) {}
 
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   openNav() {
     this.showBurger = false;
@@ -53,13 +42,17 @@ export class NavbarComponent implements OnInit {
     dialogConfig.minHeight = '100vh';
     dialogConfig.panelClass = 'overlay';
     dialogConfig.data = {
-      menuFields: this.fields,
       showBurger: this.showBurger,
     };
     const dialogRef = this.dialog.open(MenuOverlayComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(data =>
-       this.showBurger = data.showBurger,
+      this.scrollToLocation(data)
     );
+  }
+
+  scrollToLocation(data){
+    this.showBurger = data.showBurger;
+    this.scrollToService.scrollTo({target: data.selectedMenuField});
   }
 
   @HostListener('window:scroll', [])

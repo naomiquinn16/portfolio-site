@@ -5,11 +5,8 @@
     <mat-dialog-content>
       <div>
           <li class="menu-overlay__content" *ngFor="let menuField of menuFields">
-              <a (click)="closeNav()"
-              [ngx-scroll-to]="menuField"
-              [ngx-scroll-to-offset]="ngxScrollToOffset"
-              [ngx-scroll-to-duration]="ngxScrollToDuration"
-              [routerLink]= "'/'"
+              <a (click)="closeNav(menuField)"
+
               > {{ menuField | uppercase}}
               </a>
           </li>
