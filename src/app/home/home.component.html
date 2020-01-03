@@ -1,6 +1,6 @@
 <div class="wrapAll">
     <app-navbar></app-navbar>
-    <app-about></app-about>
+    <app-about (showAllComponents)="toggleComponents($event)"></app-about>
     <app-work></app-work>
     <app-play></app-play>
     <app-contact></app-contact>
